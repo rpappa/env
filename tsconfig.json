@@ -16,6 +16,9 @@
         "outDir": "dist",
         // go to js file when using IDE functions like
         // "Go to Definition" in VSCode
-        "declarationMap": true
+        "declarationMap": true,
+        // Typecheck the JavaScript source
+        "checkJs": true,
+        "strict": true
     }
 }

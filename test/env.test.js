@@ -18,6 +18,14 @@ describe('env', () => {
 
         expect(env`TEST_ENV_VAR_${substitutionStr}_${substitutionNumber}`).toBe('test');
     });
+
+    it('does not escape substitutions', () => {
+        process.env[String.raw`TEST\ENV`] = 'test';
+
+        expect(env`TEST\ENV`).toBe('test');
+        expect(env`TESTENV`).toBe(undefined);
+        expect(env`TEST\\ENV`).toBe(undefined);
+    });
 });
 
 describe('envStr', () => {

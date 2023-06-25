@@ -7,6 +7,15 @@
         "types": "./dist/index.d.ts",
         "default": "./src/index.js"
     },
+    "files": [
+        "dist/**/*",
+        "src/**/*"
+    ],
+    "types": "./dist/index.d.ts",
+    "main": "./src/index.js",
+    "engines": {
+        "node": ">=16.0.0"
+    },
     "scripts": {
         "format": "prettier --write .",
         "build": "del-cli dist && npm run format && tsc",
