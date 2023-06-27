@@ -1,7 +1,7 @@
 {
     "name": "@rpappa/env",
     "type": "module",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Tagged template literals for environment variables",
     "exports": {
         "types": "./dist/index.d.ts",
