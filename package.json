@@ -24,6 +24,10 @@
         "release": "np"
     },
     "author": "rpappa",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rpappa/env"
+    },
     "license": "MIT",
     "devDependencies": {
         "@types/node": "^20.3.1",
