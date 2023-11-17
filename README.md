@@ -29,6 +29,29 @@ The subtle difference is that envStr returns the empty string when the environme
 { envResult: 'hello', envStrResult: 'hello' }
 ```
 
+If a variable is required, you can also use `envRequired` or `envRequiredNonEmpty`:
+
+```
+import { envRequired, envRequiredNonEmpty } from '@rpappa/env';
+
+try {
+    const TEST_A = envRequired`TEST`;
+} catch (e) {
+    console.error("envRequired threw an error")
+    console.log(e);
+}
+
+try {
+    const TEST_B = envRequiredNonEmpty`TEST`;
+} catch (e) {
+    console.error("envRequiredNonEmpty threw an error")
+    console.log(e);
+}
+```
+
+In this case, `envRequired` will throw an error if the variable is not set, and `envRequiredNonEmpty` will throw an
+error if the variable is not set or is set to the empty string.
+
 ### Note on escaping
 
 Under the hood both `env` and `envStr` call
